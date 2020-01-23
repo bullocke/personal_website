@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dr. Eric Bullock</title>
+  <title>Eric Bullock, PhD</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -216,6 +216,13 @@ and applications for
         weight: 4
     }
 
+    var talkStyle = {
+		color: '#00f9ff',
+		fillColor: '#00f9ff',
+		fillOpacity: 0.5,
+        weight: 4
+    }
+
     var hoverStyle = {
             weight: 10,
             color: '#666',
@@ -249,6 +256,10 @@ and applications for
         var layer = e.target;
         layer.setStyle(workshopStyle)
     }   
+    function unhighlightFeatureT(e) {
+        var layer = e.target;
+        layer.setStyle(talkStyle)
+    }   
         
     var makeContent = function(lay) {
       var content = "<img src=" + lay.figure +"  style='width: 100%; height: 100%;'></img><br>" +
@@ -268,11 +279,28 @@ and applications for
        "<br />" + lay.summary;
     return content}
 
-    var makeContentTalk = function(lay) {
-      var content = 
-       "<b>" + lay.title + "</b>" + 
-       "<br />" + lay.location;
-    return content}
+    var makeMarkerTalk = function(coords, size, title, loc) {
+      var content = "<b>" + loc + "</b>" +" <br />" + title; 
+      var newMarker = L.circle(coords, size, talkStyle)
+      newMarker.bindPopup(L.popup({minWidth: 400}).setContent(content))
+      newMarker.on('mouseover',highlightFeature)
+               .on('mouseout', unhighlightFeatureT)     
+    return newMarker}
+
+    var info = L.control();
+
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+        this.update();
+        return this._div;
+    };
+
+    // method that we will use to update the control based on feature properties passed
+    info.update = function (props) {
+        this._div.innerHTML = '<h4>Click a marker for more information</h4>' 
+    };
+
+    info.addTo(mymap);
 
 
     ////////////////// Research Papers /////////////////////////////
@@ -289,6 +317,19 @@ and applications for
           .on('mouseout', unhighlightFeature)     
     var amazonPopup = L.popup({minWidth: 400}).setContent(makeContent(amazon));
     amazon.bindPopup(amazonPopup)
+
+    // Near-real Time
+    var nrt = L.circle([2.622614, -73.457579], 300000, researchStyle)
+    nrt.title = 'Near-Real Time Forest Monitoring with MODIS'
+    nrt.figure = './img/nrt_figure.jpeg'
+    nrt.summary = 'Tang, X., Bullock, E. L., Olofsson, P., Estel, S., & Woodcock, C. E. (2019). Near real-time monitoring of tropical forest disturbance: New algorithms and assessment framework. <i>Remote Sensing of Environment</i>, 224, 202-218.'
+    nrt.link = 'https://bullocke.users.earthengine.app/view/amazon'
+    nrt.link = 'https://doi.org/10.1016/j.rse.2019.02.003'
+    nrt.linkText = 'Manuscript'
+    nrt.on('mouseover',highlightFeature)
+          .on('mouseout', unhighlightFeature)     
+    var nrtPopup = L.popup({minWidth: 400}).setContent(makeContent(nrt));
+    nrt.bindPopup(nrtPopup)
 
     // Vietnam Mangroves
     var viet = L.circle(researchCoords[0], 300000, researchStyle)
@@ -414,17 +455,95 @@ and applications for
     indonesia.figure = './img/indonesia_figure.jpeg'
     indonesia.bindPopup(L.popup({minWidth: 400}).setContent(makeContentWorkshop(indonesia)));
 
-    // Finally, add talks from geojson
+    var thailand = L.circle([13.715102, 100.648164], 300000, workshopStyle)
+        .on('mouseover',highlightFeature)
+        .on('mouseout', unhighlightFeatureWS)
+    thailand.title = 'Department of National Parks (DNP), Bangkok, Thailand'
+    thailand.summary = 'SilvaCarbon Training on Land Change Monitoring Using Time Series Analysis of Landsat Data'
+    thailand.figure = './img/thailand_figure.jpg'
+    thailand.bindPopup(L.popup({minWidth: 400}).setContent(makeContentWorkshop(thailand)));
+
+    // Finally, add talks
+    var talk1 = makeMarkerTalk(
+        [37.400758, -122.082986], 
+        100000,
+        'Continuous Degradation Detection (CODED) on the Google Earth Engine',
+        'Geo For Good 2019, Mountainview, CA')
+
+    var talk2 = makeMarkerTalk(
+        [-25.945956, 32.586305], 
+        100000,
+        'Estimating Activity Data Related to Tropical Forest Degradation',
+        'GFOI Planery 2019, Maputo, Mozambique')
+
+    var talk3 = makeMarkerTalk(
+        [5.353826, -3.914539],
+        100000,
+        'BEEODA: a suite of open-source software and educational materials for processing Earth Observation data',
+        'GOFC-GOLD REDD+ Monitoring, and Measurement, Reporting and Verification Workshop, 2017, Adjiban, Côte dIvoire')
+
+    var talk4 = makeMarkerTalk(
+        [43.524335, -96.745762],
+        100000,
+        'Multi-algorithm Sequencing for Land Cover Change Monitoring.',
+        'Pecora Conference 2017, Sioux Falls, South Dakota')
+
+    
+    var talk5 = makeMarkerTalk(
+        [38.991258, -76.941198],
+        100000,
+        'Monitoring tropical forest degradation in the Amazon Basin',
+        'ForestSAT 2018, College Park, MD')
+
+    var talk6 = makeMarkerTalk(
+        [42.351034, -71.085655],
+        100000,
+        'Earth observation data in support of carbon offset programs and conservation',
+        'State Street Coorporation 2018, Boston, MA')
+
+    var talk7 = makeMarkerTalk(
+        [9.991384, -84.196636],
+        100000,
+        'Monitoring tropical forest degradation on the Google Earth Engine',
+        'SilvaCarbon Workshop, 2018, San Jose, Costa Rica')
+
+    var talk8 = makeMarkerTalk(
+        [-25.306924, -57.661778],
+        100000,
+        'Creating Activity Data related to Forest Degradation in Support of National MRV Systems',
+        'SilvaCarbon Workshop, 2019, Asunción, Paraguay')
+
+    var talk9 = makeMarkerTalk(
+        [-34.823836, -56.271468],
+        100000,
+        'Creating Activity Data related to Forest Degradation in Support of National MRV Systems',
+        'SilvaCarbon Workshop, 2019, Montevideo, Uruguay')
+
+    var talk10 = makeMarkerTalk(
+        [34.707557, -86.606203],
+        100000,
+        'Continuous Degradation Detection (CODED): Monitoring Forest Degradation on the Google Earth Engine',
+        'SilvaCarbon/SERVIR State of the Art Land Cover Change Methods, 2019, Huntsville, AL')
+
+    var talk11 = makeMarkerTalk(
+        [10.689899, 106.464461],
+        100000,
+        'Continuous Change Detection and Classification (CCDC)',
+        'SilvaCarbon Workshop on Time Series Analysis for Forest Cover Change, 2015, Ho Chi Minh City, Vietnam')
+
 
     // Add controls
-    var research = L.layerGroup([amazon, viet, newEngland, coded, guat, pp, micronesia, iquitos])
-    var capacity = L.layerGroup([congo, kenya, peru, indonesia])
+    var research = L.layerGroup([amazon, viet, newEngland, coded, guat, pp, micronesia, iquitos, nrt])
+    var capacity = L.layerGroup([congo, kenya, peru, indonesia, thailand])
+    var talks = L.layerGroup([talk1, talk2, talk3, talk4, talk5, talk6, talk7, talk8, talk9, talk10, talk11])
+    talks.addTo(mymap)
     capacity.addTo(mymap)
     research.addTo(mymap)
 
     var overlayMaps = {
     "Research": research,
-    "Technical Workshops": capacity
+    "Technical Workshops": capacity,
+    "Selected Talks": talks
     };
     L.control.layers(null, overlayMaps, {collapsed:false}).addTo(mymap);
 
