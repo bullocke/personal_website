@@ -222,6 +222,12 @@ and applications for
 		fillOpacity: 0.5,
         weight: 4
     }
+    var welcomeStyle = {
+		color: '#000000',
+		fillColor: '#000000',
+		fillOpacity: 0.5,
+        weight: 1
+    }
 
     var hoverStyle = {
             weight: 10,
@@ -237,6 +243,8 @@ and applications for
         [-3.10194, -60.025], // amazon
         [-11.5057, -63.5806] // rondonia
         ]
+
+    var welcomeCoords = [42.8615, -71.6253]
 
     var workshopCoords = [
         [-4.270819, 15.240269]]
@@ -279,6 +287,10 @@ and applications for
        "<br />" + lay.summary;
     return content}
 
+    var makeContentWelcome = function(lay) {
+      var content = lay.summary; 
+    return content}
+
     var makeMarkerTalk = function(coords, size, title, loc) {
       var content = "<b>" + loc + "</b>" +" <br />" + title; 
       var newMarker = L.circle(coords, size, talkStyle)
@@ -297,22 +309,29 @@ and applications for
 
     // method that we will use to update the control based on feature properties passed
     info.update = function (props) {
-        this._div.innerHTML = '<h4>Click a marker for more information</h4>' 
+        this._div.innerHTML = '<h4>Welcome to my georesume! Click a marker on the map to learn about my scientific caeer.</h4>' 
     };
 
-    info.addTo(mymap);
+//    info.addTo(mymap);
 
 
     ////////////////// Research Papers /////////////////////////////
+
+    // Welcome box
+    var welcome = L.circle(welcomeCoords, 100, welcomeStyle)
+    welcome.style = 'Welcome to my Georesume! Click a point to learn about my academic career.'
+    welcomePopup = L.popup().setContent(makeContentWelcome(welcome))
+    welcome.bindPopup(welcome.style)
+
+
 
     // Amazon Ecoregion
     var amazon = L.circle(researchCoords[2], 300000, researchStyle)
     amazon.title = 'Amazon Ecoregion'
     amazon.figure = './img/amazon_figure.jpeg'
-    amazon.summary = 'Satellite-Based Estimates Reveal Widespread Forest Degradation in the Amazon (In Review)'
-    amazon.summary = 'Bullock, E., Woodcock, C.E., Olofsson, P., Souza Jr, C., 2019. <i> Satellite-Based Estimates Reveal Widespread Forest Degradation in the Amazon.</i> In Review.'
-    amazon.link = 'https://bullocke.users.earthengine.app/view/amazon'
-    amazon.linkText = "Earth Engine App Animation"
+    amazon.summary = 'Bullock, E., Woodcock, C.E., Olofsson, P., Souza Jr, C., 2019. Satellite-Based Estimates Reveal Widespread Forest Degradation in the Amazon. <i>Global Change Biology</i>, Accepted Manuscript'
+    amazon.link = 'https://doi.org/10.1111/gcb.15029'
+    amazon.linkText = "Manuscript"
     amazon.on('mouseover',highlightFeature)
           .on('mouseout', unhighlightFeature)     
     var amazonPopup = L.popup({minWidth: 400}).setContent(makeContent(amazon));
@@ -539,6 +558,9 @@ and applications for
     talks.addTo(mymap)
     capacity.addTo(mymap)
     research.addTo(mymap)
+    welcome.addTo(mymap)
+   // mymap.open(welcomePopup) 
+    welcome.openPopup()
 
     var overlayMaps = {
     "Research": research,
