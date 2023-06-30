@@ -1,0 +1,27 @@
+ [
+    {  
+        "title": "Surveying mangrove ecosystems for a national carbon stock assessment in Pohnpei, Federated States of Micronesia (FSM)",
+        "collaborators": "US Forest Service, FSM Department of Environment, Climate Change & Emergency Management (DECEM), US Geological Survey",
+        "category": "Field Work",
+        "lat": 6.8541,
+        "lon": 158.2624,
+        "datelocation": "Pohnpei, Federated States of Micronesia, 2017",
+        "summary": "In a collaboration between the United States and FSM governments, a major undertaking was completed to survey and evaluate the carbon stock and species composition of the mangrove forests of Pohnpei.",
+        "role": "To help this project, I led one of three field teams measuring plot-level information on mangrove structure, composition, and carbon content.",
+        "image": "assets/images/field/micronesia.jpeg",
+        "doi": "https://doi.org/10.1016/j.rse.2023.113626"
+    },
+    {  
+        "title": "Field site visits to evaluate maps of forest degradation in Iquitos, Peru.",
+        "collaborators": "Dr. Curtis E. Woodcock, Dr. Paulo Arevalo, The Research Institute Of The Peruvian Amazon (IIAP)",
+        "category": "Field Work",
+        "lat": -3.7437,
+        "lon": -73.2516,
+        "date": 2019,
+        "datelocation": "Iquitos, Peru, 2019",
+        "summary": "As part of my dissertation, I developed a satellite remote sensing algorithm to track forest degradation and deforestation in the tropics.",
+        "role": "After applying this algorithm to the entire Amazon Ecoregion and performing a proper accuracy assessment, we selected targetted sites in the Iquitos region to field sites to further understand the spectral response to different tyes of forest degradation.",
+        "image": "assets/images/field/peru2019_2.jpeg",
+        "doi": "https://doi.org/10.1111/gcb.15029"
+    }
+]

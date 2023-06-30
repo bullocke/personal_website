@@ -1,0 +1,135 @@
+[
+    {
+        "title": "Three decades of land cover change in East Africa",
+        "category": "Research",
+        "lat": -6.3690,
+        "lon": 34.8888,
+        "date": "2021",
+        "description": "",
+        "image": ""
+    },
+    {
+
+        "title": "Timeliness in Forest Change Monitoring: A New Assessment Framework Demonstrated using Sentinel-1 and a Continuous Change Detection Algorithm",
+        "category": "Research",
+        "lat": -18.8792,
+        "lon": 47.5079,
+        "date": "2022",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Detecting mangrove degradation, deforestation, and regrowth using Continuous Change Detection and Classification (CCDC)",
+        "category": "Teaching",
+        "lat": -18.1405,
+        "lon": 178.4233,
+        "date": "Oct. 2022",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Carbon loss and removal due to Forest disturbance and regeneration in the Amazon",
+        "category": "Research",
+        "lat": -3.4653,
+        "lon": -62.2159,
+        "date": "2021",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Ongoing forest disturbance in Guatemala’s protected areas",
+        "category": "Research",
+        "lat": 15.7835,
+        "lon": -90.2308,
+        "date": "2020",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Improved change monitoring using an ensemble of time series algorithms",
+        "category": "Research",
+        "lat": 44.2998,
+        "lon": -99.4388,
+        "date": "2020",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Continuous Degradation Detection (CODED)",
+        "category": "Teaching",
+        "lat": 3.8480,
+        "lon": 11.5021,
+        "date": "Jan. 2020",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Monitoring tropical forest degradation using spectral unmixing and Landsat time series analysis",
+        "category": "Research",
+        "lat": -11.5057,
+        "lon": -63.5806,
+        "date": "2020",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Satellite-based estimates reveal widespread forest degradation in the Amazon",
+        "category": "Research",
+        "lat": -3.4653,
+        "lon": -62.2159,
+        "date": "2020",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Near real-time monitoring of tropical forest disturbance: New algorithms and assessment framework",
+        "category": "Research",
+        "lat": -3.4653,
+        "lon": -62.2159,
+        "date": "2019",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Temporal patterns in species zonation in a mangrove forest in the Mekong Delta, Vietnam, using a time series of Landsat imagery",
+        "category": "Research",
+        "lat": 10.2270,
+        "lon": 105.6707,
+        "date": "2017",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "Time series analysis of satellite data reveals continuous deforestation of New England since the 1980s",
+        "category": "Research",
+        "lat": 43.9654,
+        "lon": -70.8227,
+        "date": "2016",
+        "description": "",
+        "image": ""
+    },
+    {
+        "title": "A two-stage stratified sampling design for Ministerio del Ambiente (MINAM) land cover change map asssessment in Peru",
+        "category": "Research",
+        "lat": -9.1900,
+        "lon": -75.0152,
+        "date": "2016",
+        "description": "",
+        "image": ""
+    }
+    ,
+    {
+        "title": "Estimating aboveground biomass density using hybrid statistical inference with GEDI lidar data and Paraguay’s national forest inventory",
+        "citation": "Bullock E L, Healey S P, Zhiqiang Y, Acosta R, Villalba H, Insfrán K P, Melo J B, Wilson S, Duncanson L, Næsset E, Armston J D, Saarela S, Ståhl G, Patterson P L and Dubayah R O 2023 Estimating aboveground biomass density using hybrid statistical inference with GEDI lidar data and Paraguays national forest inventory Environ. Res. Lett.",
+        "category": "Research",
+        "lat": -24.36495,
+        "lon": -56.18842,
+        "date": "2023",
+        "description": "",
+        "image": ""
+    }
+        
+    
+
+    
+]
