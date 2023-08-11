@@ -49,29 +49,27 @@ const focalareasModalFunc = function () {
 // modal toggle expertise function
 const expertiseModalFunc = function () {
   expertiseModalContainer.classList.toggle("active");
-  // expertiseOverlay.classList.toggle("active");
+  expertiseOverlay.classList.toggle("active");
 }
 
-// Doing it differently for reesarch
-// Get the modals
+// Get the modals for the stories
 var modalexps = [
-  document.getElementById("modalexp1"),
-  // document.getElementById("modal2"),
-  // document.getElementById("modal3"),
-  // document.getElementById("modal4"),
-  // document.getElementById("modal5")
+  document.getElementById("story1"),
+  document.getElementById("story2"),
+  document.getElementById("research-modal-coded"),
+
 ];
 
-// Get the buttons that open the modals
+// // Get the buttons that open the modals
 // var btns = [
-//   document.getElementById("project1"),
-//   // document.getElementById("project2"),
-//   // document.getElementById("project3"),
-//   // document.getElementById("project4"),
-//   // document.getElementById("project5")
+//   document.getElementById("btn-story1"),
+//   document.getElementById("btn-story2"),
+//   document.getElementById("btn-coded"),
+
 // ];
 
-// // Get the <span> elements that close the modals
+
+// // // Get the <span> elements that close the modals
 // var spans = document.getElementsByClassName("close");
 
 // // Loop through the buttons array
@@ -89,15 +87,15 @@ var modalexps = [
 //   }
 // }
 
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   for(let i = 0; i < modalexps.length; i++) {
-//     if (event.target == modalexps[i]) {
-//       btns[i].appendChild(modalexps[i]);  // Move the modal back to the li
-//       modalexps[i].style.display = "none";
-//     }
-//   }
-// }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  for(let i = 0; i < modalexps.length; i++) {
+    if (event.target == modalexps[i]) {
+      btns[i].appendChild(modalexps[i]);  // Move the modal back to the li
+      modalexps[i].style.display = "none";
+    }
+  }
+}
 
 
 
@@ -150,7 +148,7 @@ overlay.addEventListener("click", focalareasModalFunc);
 
 // select.addEventListener("click", function () { elementToggleFunc(this); });
 
-// // add event in all select items
+// add event in all select items
 // for (let i = 0; i < selectItems.length; i++) {
 //   selectItems[i].addEventListener("click", function () {
 
@@ -278,3 +276,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+

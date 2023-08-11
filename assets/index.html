@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Bullock - Looking at Trees from Space</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/biomass_green.svg" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - leaflet
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  
+  <!-- 
+    Pageclip form submission
+  -->
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+  
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/headshot.jpg" alt="Eric Bullock" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Eric Bullock">Eric Bullock, Ph.D.</h1>
+
+          <p class="title">Research Geographer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:elb.geography@gmail.com" class="contact-link">elb.geography@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1990-03-27">March 27, 1990</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Salt Lake City, Utah, USA</address>
+            </div>
+            
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=LBcLx0sAAAAJ&hl=en" class="social-link">
+              <ion-icon name="school"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/eric__bullock" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/eric-bullock-89365ba2/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Research</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            My passion as a remote sensing scientist is driven by the goal of democratizing access to environmental monitoring tools. Through technological innovation and open science, I envisage an egalitarian environmental future, from the pixel to the planetary scale.
+          </p>  
+        </section>
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item"  id="btn-story1">
+              <div class="service-icon-box">
+                <img src="./assets/images/satellite.svg" alt="design icon" width="40">
+              </div>
+
+                  <div class="service-front" id="front1">
+
+
+
+                        <!-- <div class="service-content-box"> -->
+                          <h4 class="h4 service-item-title">Remote Sensing & Geospatial Development</h4>
+                            
+                            <p class="service-item-text">
+                              The most modern and high-quality design made at a professional level.
+                            </p>    
+
+                        
+                  </div>
+
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/trees.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Applied Research</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/person-chalkboard.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Capacity Building</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/images.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Field? Machine Learning?</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- Service Item Modals -->
+        <div id="story1" class="modal-research">
+          <div class="modal-research-content" research-modal-container>
+            <span class="close">&times;</span>
+          
+          
+            <div class="modal-research-intro">
+                
+              <div class="modal-research-title">
+                <h2 class="modal-title">Remote Sensing & Geospatial Development</h2>
+                   
+                <div class="modal-research-intro-image">
+                  <img src="./assets/images/highlights/degradation/degradation_highlight_title.png" alt="fundo" loading="lazy">
+                </div>
+
+              </div>
+
+              <h2 class="research-modal-subtitle">Areas of Expertise</h2>
+              <hr class="thin-line">
+              <ul>
+                <li>Time Series Analysis</li>
+                <li>Sensor Fusion</li>
+                <li>Machine Learning</li>
+                <li>Statistical Analysis</li>
+                <li>Geospatial Applications</li>
+              </ul>
+
+              <h3 class="research-modal-subtitle">Summary</h3>
+              <hr class="thin-line">
+              <p>Climate change and human-caused disturbances are transforming the world's ecosystems, posing substantial threats to the environment and the communities dependent on them. My expertise lies in pioneering methodologies that harness both field and satellite data to monitor complex land use dynamics at scale.</p>
+              <p>IMPROVE: These methodologies have been effectively implemented worldwide. Examples include the operational application in <a href="https://sig-gis.com/mapping-forest-degradation-in-nepal/">Nepal's REDD+ program</a>, conducting an <a href="https://doi.org/10.1002/rse2.130">impact analysis</a> of a conservation initiative in Guatemala in collaboration with the Inter-American Development Bank, establishing a <a href="https://doi.org/10.1111/gcb.15029">30-year record</a> of deforestation and degradation in the Amazon, and strategizing mangrove restoration projects in the Pacific.</p>
+              <hr class="thick-line">
+            </div>
+
+            <!-- EXAMPLES -->
+            <!-- Example 1: Time series analysis -->
+            <div class="modal-research-intro">
+                
+              <div class="modal-research-title">
+                <h2 class="modal-title">Time Series Analysis</h2>
+                   Example: Continuous Degradation Detection (CODED)
+                <div class="modal-research-intro-image">
+                  <img src="./assets/images/highlights/GeoDevelopment/coded_ts.png" alt="fundo" loading="lazy">
+                </div>
+
+              </div>
+
+              <h2 class="research-modal-subtitle">Applications</h2>
+              <hr class="thin-line">
+              <ul>
+                <li>REDD+ Reporting</li>
+                <li>Mangrove Restoration</li>
+                <li>Evaluating Protected Areas</li>
+                <li>Carbon Accounting</li>
+              </ul>
+
+              <h3 class="research-modal-subtitle">Summary</h3>
+              <hr class="thin-line">
+              <p>so paid.</p>
+              
+              <!-- Example 1.1 -->
+              <div class="modal-research-example">
+                <h4>Continuous Degradation Detection (CODED)</h4>
+                <h5>Fill: Header figure</h5>
+                <p>
+                  Deforestation and forest degradation are the most pressing threat to global forests. Deforestation is the clearing of forest land for non-forest uses. In contrast, forest degradation is a reduction in the capacity of a forest to provide goods and services, characterized by a reduction in carbon storage, tree cover, biodiversity, and shifts in forest structure.
+                  <br><br>While studying for my doctorate at Boston University, I was awarded a <a href="https://nspires.nasaprs.com/external/viewrepositorydocument/cmdocumentid=510996/solicitationId=%7B3D09A726-3A1B-AE98-F96C-5139CDF43BCE%7D/viewSolicitationDocument=1/Updated%20NESSF16_ES%20Web%20Posting.pdf">NASA NESSF Earth and Space Science Fellowship</a> to study remote sensing methods for monitoring forest degradation. This ultimately led to the development of the <a href="https://doi.org/10.1016/j.rse.2018.11.011">Continuous Degradation Detection (CODED) methodology</a>, an open-source tool that uses Landsat or Sentinel-2 data to detect and map forest degradation and deforestation.
+                </p>
+                <div class="modal-research-example-box">
+                  <i>How CODED Works</i>
+                  <br><b>1. Spectral mixture analysis to calculate the Normalized Difference Fraction Index (NDFI)</b>
+                  <img src="./assets/images/highlights/GeoDevelopment/coded_unmixing.png" alt="fundo" loading="lazy">
+                  <br><b>2. Harmonic regression to identify change points at the pixel level</b>
+                  <img src="./assets/images/highlights/GeoDevelopment/coded_ts_website_no_class.png" alt="fundo" loading="lazy">
+                </div>
+                  <!--
+                  CODED employs a data-driven approach to accurately identify and categorize forest disturbances. Inspired by the pioneering work of <a href="https://doi.org/10.1016/j.rse.2005.07.013">Souza et al. (2005)</a>, CODED couples spectral unmixing, time-series analysis, and supervised machine learning, allowing it to accurately map degradation events. 
+                  <img src="./assets/images/highlights/GeoDevelopment/coded_ts_website.png" alt="fundo" loading="lazy">
+
+                  <img src="./assets/images/projects/coded/coded_heroshot.png" alt="fundo" loading="lazy">
+
+                  <br><br>Scaling CODED for the entire Amazon Ecoregion necessitated the embrace of distributed computing and migration of the CODED model from Python to JavaScript and <a href="https://earthengine.google.com/">Google Earth Engine</a>. I established a method for evaluating the training data's representative and tuning the model parameters, enabling me to tackle Amazon's notorious cloud cover, manage extensive data volumes, and optimize the model's efficiency.
+
+                  <br><br>Once operational, I applied CODED to the vast Amazon Ecoregion, mapping annual deforestation and forest degradation from 1990 to 2017. Acknowledging that the map inevitably contained errors, I used a sample-based approach to estimate areas of disturbance over time. To accomplish this goal, I trained and supervised a team of 12 research assistants to interpret a comprehensive reference sample for use in an unbiased statistical estimator of disturbance area. 
+
+
+                  <br><br>The original forest area had lost an astonishing 17% by 2017, approximately 1,036,800 ± 24,800 square kilometers. This is almost double the previous estimates, highlighting a significant shift in our understanding of the Amazon's vulnerability. Our research was the first to account for degradation and adjust for map errors in the entire Amazon Ecoregion.
+
+                  <br><br>The algorithm's success in the Amazon led to its adoption in several other studies and initiatives. Its applications ranged from <a href="https://doi.org/10.1002/rse2.130">assessing the effectiveness of protected areas in Guatemala</a> to informing multiple pilot studies for REDD+ programs. <a href="https://www.forestcarbonpartnership.org/system/files/documents/grm_fiji_p151209_fy21_progress_report_final.pdf">The World Bank backed an investigation in Fiji</a> using CODED, and a <a href="https://doi.org/10.3390/rs13142666">pilot study in Nepal</a> led to the incorporation of CODED into the country's <a href="https://sig-gis.com/mapping-forest-degradation-in-nepal/">REDD+ Program</a> and Nationally Determined Contributions (NDCs) to the Paris Climate Agreement.
+
+                 <br><br>To foster widespread use of CODED, I developed an e-Learning course, an online application, and World Bank-funded tutorials on their OpenMRV platform. Additionally, CODED was incorporated into FAO's SEPAL platform, highlighting its global relevance and impact.
+
+                 <br><br>Beyond academic recognition, I've presented my work with CODED at various significant events and conferences, including the GFOI Plenary, AGU Fall Meeting, ForestSat, Pecora, and the 2019 Google Earth Engine Summit. -->
+              </div>
+              <hr class="thick-line">
+            </div>
+            
+            <!-- Example 2: Sensor Fusion -->
+            <div class="modal-research-intro">
+                
+              <div class="modal-research-title">
+                <h2 class="modal-title">Sensor Fusion</h2>
+                   
+                <div class="modal-research-intro-image" style="width: 50%; margin-left: auto; margin-right: auto;">
+                  <img src="./assets/images/highlights/GeoDevelopment/forest_change_logo3.png" alt="fundo" loading="lazy">
+                </div>
+
+              </div>
+
+              <h2 class="research-modal-subtitle">Example Applications</h2>
+              <hr class="thin-line">
+              <ul>
+                <li>Daily Forest Disturbance Alerts</li>
+                <li>Land Use and Land Cover Classification</li>
+              </ul>
+
+              <h3 class="research-modal-subtitle">Summary</h3>
+              <hr class="thin-line">
+              <p>Intro.</p>
+              <p>What I am doing or have done.</p>
+
+
+              <hr class="thick-line">
+            </div>
+
+            <!-- Example 3: Machine Learning -->
+            <div class="modal-research-intro">
+                
+              <div class="modal-research-title">
+                <h2 class="modal-title">Machine Learning</h2>
+                   
+                <div class="modal-research-intro-image" style="width: 50%; margin-left: auto; margin-right: auto;">
+                  <img src="./assets/images/highlights/GeoDevelopment/forest_change_logo3.png" alt="fundo" loading="lazy">
+                </div>
+
+              </div>
+
+              <h2 class="research-modal-subtitle">Example Applications</h2>
+              <hr class="thin-line">
+              <ul>
+                <li>Daily Forest Disturbance Alerts</li>
+                <li>Land Use and Land Cover Classification</li>
+              </ul>
+
+              <h3 class="research-modal-subtitle">Summary</h3>
+              <hr class="thin-line">
+              <p>Intro.</p>
+              <p>What I am doing or have done.</p>
+
+
+              <hr class="thick-line">
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <header>
+          <h3 class="h3 expertise-title">Current Research Topics</h3>
+        </header>
+
+        <ul class="story-list"> -->
+
+          <!-- Forest Change -->
+          <!-- <div class="project-item-wrapper">
+            <li class="project-item  active">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-text-box">
+                    <p> + </p>
+                  </div>
+
+                  <img src="./assets/images/highlights/degradation/intro1.png" alt="degradation" loading="lazy">
+                </figure>
+              </a> -->
+
+              
+            <!-- </li>
+            <h3>Forest Degradation</h3>
+            <p>Time series, Optical, Radar, Google Earth Engine, Forest degradation, Disturbance alerts</p>
+
+          </div> -->
+
+        
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="focalareas-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/trees.svg" alt="Trees" width="80" data-modal-img>
+              </figure>
+
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <div data-modal-text>
+                <p>
+                  
+                </p>
+              </div>
+
+            </div>
+
+
+          </section>
+
+        </div>
+      
+        <!--
+          - Leaflet Resume
+        -->
+
+        <section class="expertise">
+
+          <h3 class="h3 expertise-title">My Work, My World</h3>
+          <!-- <div id="mapid"></div> -->
+
+        </section>
+      
+
+        
+        <!--
+          - Areas of expertise
+        -->
+        <!-- Geospatial Development     -->
+        <section class="focalareas">
+
+          <h3 class="h3 focalareas-title">Areas of Expertise</h3>
+
+          <ul class="focalareas-list has-scrollbar">
+
+            <li class="focalareas-item">
+              <div class="content-card" data-focalareas-item>
+
+                <figure class="focalareas-avatar-box">
+                  <img src="./assets/images/satellite.svg" alt="Geospatial Development" width="40" data-focalareas-avatar>
+                </figure>
+
+                <h4 class="h4 focalareas-item-title" data-focalareas-title>Geospatial Development</h4>
+
+                <div class="focalareas-text" data-focalareas-text>
+                  <p>
+                    I specialize in developing innovative methodologies for large-scale monitoring of environmental change and natural resource assessments through the integration of optical, radar, and lidar remote sensing with field data, machine learning, and statistical techniques.                    
+                    <br><br><b>Examples: </b>
+                     <ul class="exampleList">
+                        <li>↪ Mapping forest degradation and deforestation using time series analysis of Landsat data.
+                          <ul class="exampleSubList">
+                            <li><a href="https://doi.org/10.1016/j.rse.2018.11.011" target="_blank" rel="noopener noreferrer">
+                              <u> • Manuscript ↗ </u>
+                            </li>
+                            <li>
+                            <a href="https://coded.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">
+                              <u>• Documentation ↗</u>
+                            </li>
+                            </ul>
+                        </a>
+                     </ul>
+                     <br>
+                     <ul class="exampleList">
+                      <li>↪ Estimating forest carbon stocks using national forest inventory and spaceborne lidar data.
+                        <ul class="exampleSubList">
+                          <li><a href="10.1088/1748-9326/acdf03" target="_blank" rel="noopener noreferrer">
+                            <u> • Manuscript ↗ </u>
+                          </li>
+                          <li>
+                          <a href="https://ceos.org/gst/user-stories/paraguay.html" target="_blank" rel="noopener noreferrer">
+                            <u>• User Story ↗</u>
+                          </li>
+                          </ul>
+                      </a>
+                   </ul>
+                   <br>
+                   <ul class="exampleList">
+                    <li>↪ Near real-time monitoring of illegal forest activities using Sentinel-1 radar time series data and Google Earth Engine.
+                      <ul class="exampleSubList">
+                        <li><a href="https://doi.org/10.1016/j.rse.2022.113043" target="_blank" rel="noopener noreferrer">
+                          <u> • Manuscript ↗ </u>
+                        </li>
+                        <li>
+                        <a href="https://www.youtube.com/watch?v=JZbLokRI8as" target="_blank" rel="noopener noreferrer">
+                          <u>• YouTube Tutorial ↗</u>
+                        </li>
+                        </ul>
+                    </a>
+                 </ul>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Land Cover and Land Use Change -->
+            <li class="focalareas-item">
+              <div class="content-card" data-focalareas-item>
+
+                <figure class="focalareas-avatar-box">
+                  <img src="./assets/images/images.svg" alt="Land Cover and Land Use Change" width="40" data-focalareas-avatar>
+                </figure>
+
+                <h4 class="h4 focalareas-item-title" data-focalareas-title>Land Cover and Land Use Change</h4>
+
+                <div class="focalareas-text" data-focalareas-text>
+                  <p>
+                    I have extensive experience tracking, quantifying, and evaluating the impacts of land cover and land use change acoss space and time.   
+                    
+                    <br><br><b>Examples: </b>
+                     <ul class="exampleList">
+                        <li>↪ Tracking land use change over 30 years across 7 countries in East Africa using a statistical sample of satellite observations. 
+                          <ul class="exampleSubList">
+                            <li><a href="https://doi.org/10.3390/land10020150" target="_blank" rel="noopener noreferrer">
+                              <u> • Manuscript ↗ </u>
+                            </li>
+                            <li>
+                            <a href="https://www.fs.usda.gov/research/rmrs/news/highlights/three-decades-land-cover-change-east-africa" target="_blank" rel="noopener noreferrer">
+                              <u>• USFS Research Highlight ↗</u>
+                            </li>
+                            </ul>
+                        </a>
+                     </ul>
+                     <br>
+                     <ul class="exampleList">
+                      <li>↪ Enabling global mapping of land cover change as one of two developers focusing on building Python and Javascript applications for data development, management, and analysis.
+                        <ul class="exampleSubList">
+                          <li><a href="https://doi.org/10.3389/fclim.2020.576740" target="_blank" rel="noopener noreferrer">
+                            <u> • Manuscript ↗ </u>
+                          </li>
+                          <li>
+                          <a href="https://sites.bu.edu/measures" target="_blank" rel="noopener noreferrer">
+                            <u>• Project Website ↗</u>
+                          </li>
+                          </ul>
+                      </a>
+                   </ul>
+                   <br>
+                   <ul class="exampleList">
+                    <li>↪ Leveraging Google Earth Engine to monitoring forest degradation and deforestation across the Amazon Ecoregion from 1990 to 2017.
+                      <ul class="exampleSubList">
+                        <li><a href="https://doi.org/10.1111/gcb.15029" target="_blank" rel="noopener noreferrer">
+                          <u> • Manuscript ↗ </u>
+                        </li>
+                        <li>
+                        <a href="https://www.github.com/bullocke/amazon" target="_blank" rel="noopener noreferrer">
+                          <u>• Dataset ↗</u>
+                        </li>
+                        </ul>
+                    </a>
+                 </ul>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+            
+            <!-- Forest Carbon Accounting and Reporting -->
+            <li class="focalareas-item">
+              <div class="content-card" data-focalareas-item>
+
+                <figure class="focalareas-avatar-box">
+                  <img src="./assets/images/trees.svg" alt="Forest Carbon Accounting and Reporting" width="40" data-focalareas-avatar>
+                </figure>
+
+                <h4 class="h4 focalareas-item-title" data-focalareas-title>Forest Carbon Accounting and Reporting</h4>
+
+                <div class="focalareas-text" data-focalareas-text>
+                  <p>
+                    The primary application of my algorithms is to map, quantify, and report carbon emissions by national greenhouse gas inventories or emissions reductions programs such as REDD+ or to meet the objectives of the Paris Agreement.    
+                    
+                    <br><br><b>Examples: </b>
+                     <ul class="exampleList">
+                        <li>↪ The Continuous Degradation Detection (CODED) algorithm, which was officially recognized as part of Nepal's Nationally Determined Contributions (NDC) to the Paris Agreement and has been applied by over 15 national REDD+ programs. 
+                          <ul class="exampleSubList">
+                            <li>
+                                <a href="https://doi.org/10.1016/j.rse.2018.11.011" target="_blank" rel="noopener noreferrer">
+                                <u> • Manuscript ↗ </u>
+                            </li>
+                            <li>
+                              <a href="https://www.openmrv.org/f/SilvaCarbon/CODED/en/story.html" target="_blank" rel="noopener noreferrer">
+                              <u>• OpenMRV Module ↗</u>
+                            </li>
+                            <li>
+                              <a href="https://coded.readthedocs.io" target="_blank" rel="noopener noreferrer">
+                              <u>• Documentation ↗</u>
+                            </li>
+                            <li>
+                              <a href="https://code.earthengine.google.com/?scriptPath=users%2Fbullocke%2Fcoded%3AForest%20Disturbance%20Mapping%20GUI" target="_blank" rel="noopener noreferrer">
+                              <u>• Google Earth Engine Application ↗</u>
+                            </li>
+                          </ul>
+                        </a>
+                     </ul>
+                     <br>
+                     <ul class="exampleList">
+                      <li>↪ Quantifying aboveground biomass density in forests with lidar. 
+                        <ul class="exampleSubList">
+                          <li>
+                            <a href="10.1088/1748-9326/acdf03" target="_blank" rel="noopener noreferrer">
+                            <u> • Manuscript ↗ </u></a>
+                          </li>
+                          <li>
+                            <a href="https://ceos.org/gst/user-stories/paraguay.html" target="_blank" rel="noopener noreferrer">
+                            <u>• User Story ↗</u></a>
+                          </li>
+                        </ul>    
+                   </ul>
+                   <br>
+                   <ul class="exampleList">
+                    <li>↪ AREA2: Area Estimation & Accuracy Assessment, a Google Earth Engine application that provides comprehensive support for sampling and estimation of in a design-based inference framework.
+                      <ul class="exampleSubList"> 
+                        <li>
+                          <a href="https://area2.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">
+                          <u> • Documentation ↗ </u>
+                        </li>
+                        <li>
+                          <a href="https://code.earthengine.google.com/?accept_repo=projects/AREA2/public" target="_blank" rel="noopener noreferrer">
+                          <u>• Google Earth Engine Repository ↗</u>
+                        </li>
+                        </ul>
+                        </a>
+                 </ul>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Capacity Building Workshops -->
+            <li class="focalareas-item">
+              <div class="content-card" data-focalareas-item>
+
+                <figure class="focalareas-avatar-box">
+                  <img src="./assets/images/person-chalkboard.svg" alt="Capacity Building" width="40" data-focalareas-avatar>
+                </figure>
+
+                <h4 class="h4 focalareas-item-title" data-focalareas-title>Capacity Building</h4>
+
+                <div class="focalareas-text" data-focalareas-text>
+                  <p>
+                    I've led numerous capacity-building workshops with the objective of aiding in the national reporting of greenhouse gas emissions.
+                    
+                    <br><br><b>Examples: </b>
+                     <ul class="exampleList">
+                        <li>↪ Generating activity data on forest degradation.
+                          <ul class="exampleSubList">
+                            <li>
+                              <i> • Please see the map on this page to see all my training experience! </i>
+                            </li>
+                            <li>
+                            <a href="https://www.openmrv.org/f/SilvaCarbon/CODED/en/story.html" target="_blank" rel="noopener noreferrer">
+                              <u>• OpenMRV Module ↗</u>
+                            </li>
+                            <li>
+                              <a href="https://www.openmrv.org/f/SilvaCarbon/CODED/en/story.html" target="_blank" rel="noopener noreferrer">
+                                <u>• E-Learning Course ↗</u>
+                            </li>
+                          </ul>
+                        </a>
+                     </ul>
+                     <br>
+                     <ul class="exampleList">
+                      <li>↪ Sample-based estimation of areas of land use change. 
+                        <ul class="exampleSubList">
+                          <li><a href="assets/images/workshops/kenya.jpeg" target="_blank" rel="noopener noreferrer">
+                            <u> • Nairobi, Kenya, March, 2018 ↗ </u>
+                          </li>
+                          </ul>
+                      </a>
+                   </ul>
+                   <br>
+                   <ul class="exampleList">
+                    <li>↪ National land use change mapping
+                      <ul class="exampleSubList">
+  
+                        <li><a href="https://area2.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">
+                          <u> • Zambia, February, 2020 ↗ </u>
+                        </li>
+
+                        </ul>
+                    </a>
+                 </ul>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+            <!-- Conservation and Restoration-->
+
+            <li class="focalareas-item">
+              <div class="content-card" data-focalareas-item>
+
+                <figure class="focalareas-avatar-box">
+                  <img src="./assets/images/seedling.svg" alt="NRT" width="40" data-focalareas-avatar>
+                </figure>
+
+                <h4 class="h4 focalareas-item-title" data-focalareas-title>Conservation and Restoration</h4>
+
+                <div class="focalareas-text" data-focalareas-text>
+                  <p>
+                    I specialize in developing remote sensing applications aimed at enhancing natural resource management, using a range of multidisciplinary techniques to tackle complex issues in conservation and restoration of natural ecosystems.
+                    <br><br><b>Examples: </b>
+                    <ul class="exampleList">
+                       <li>↪ Mapping forest disturbances within Guatemala's protected areas.
+                         <ul class="exampleSubList">
+                           <li>
+                           <a href="https://doi.org/10.1002/rse2.130" target="_blank" rel="noopener noreferrer">
+                             <u>• Manuscript ↗</u>
+                           </li>
+                           </a>
+                         </ul>
+                    </ul>
+                    <br>
+                    <ul class="exampleList">
+                     <li>↪ Evaluating the impact of geomorphic and hydrological changs on species zonation patterns in a restored mangrove forest following mangrove planting.
+                       <ul class="exampleSubList">
+                         <li><a href="https://doi.org/10.1016/j.csr.2017.07.007" target="_blank" rel="noopener noreferrer">
+                           <u> • Manuscript ↗ </u>
+                         </li>
+                         </ul>
+                     </a>
+                  </ul>
+                  <br>
+                  <ul class="exampleList">
+                   <li>↪ Evaluating conservation instruments in biodiversity hotspots in the Colombian Andes. 
+                     <ul class="exampleSubList">
+ 
+                       <li><a href="https://lcluc.umd.edu/projects/comparing-effectiveness-conservation-instruments-colombian-andes-biodiversity-hotspot" target="_blank" rel="noopener noreferrer">
+                         <u> • NASA Grant Overview ↗ </u>
+                       </li>
+
+                       </ul>
+                   </a>
+                </ul>
+                 </p>
+               </div>
+             </div>
+           </li>
+        </section>      
+      </article>
+      
+
+      <!--
+        - #RESUME
+      -->
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+        
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+        
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Boston University</h4>
+
+              <span>2015 — 2019</span>
+
+              <p class="timeline-text">
+                Doctor of Philosophy in Geography
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Boston University</h4>
+
+              <span>2013 — 2014</span>
+
+              <p class="timeline-text">
+                Master of Arts in Remote Sensing and GIS for the Environment
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University of Colorado</h4>
+
+              <span>2008 — 2011</span>
+
+              <p class="timeline-text">
+                Bachelor of Arts in Sociology and Environmental Studies
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Research Geographer, US Forest Service</h4>
+
+              <span>10/2020 — Present</span>
+
+              <div class="timeline-sublist-wrapper">
+                <p class="timeline-sublist">
+                  • Developed a novel approach to forest change detection using fusion of Planet, Landsat, Sentinel-2, and Sentinel-1 data <br>
+                </p>  
+                <p class="timeline-sublist">
+                  • Led capacity building workshops on near real-time disturbance monitoring using radar remote sensing <br>
+                </p>  
+                <p class="timeline-sublist"> 
+                  • Designed and published a methodology for carbon stock estimation using GEDI lidar and national forest inventory data <br>
+                </p>  
+                <p class="timeline-sublist">  
+                  • Developed and published a manuscript on a novel assessment framework for evaluating near real-time forest monitoring systems <br>
+                </p>
+              </div>  
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Postdoctoral Researcher, Boston University</h4>
+
+              <span>09/2019 — 07/2020</span>
+
+              <div class="timeline-sublist-wrapper">
+                <p class="timeline-sublist">
+                  • Co-developed the Google Earth Engine utilities, interactive applications, and end-to-end processing workflow for global land cover mapping using a Landsat time series algorithm. <br>
+                </p>  
+                <p class="timeline-sublist">
+                  • Co-developed a Python application for land cover classification training data collection. <br>
+                </p>  
+                <p class="timeline-sublist"> 
+                  • Designed and maintained a database of training data used by over 25 data collectors. <br>
+                </p>  
+                <p class="timeline-sublist">  
+                  • Led and participated in multiple training workshops on land cover classification and forest degradation monitoring <br>
+                </p>
+              </div>  
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Doctoral Researcher, Boston University</h4>
+
+              <span>08/2015 — 09/2019</span>
+
+              <div class="timeline-sublist-wrapper">
+                <p class="timeline-sublist">
+                  • Trained and supervised a team of 12 researchers to study carbon dynamics in the Amazon. <br>
+                </p>  
+                <p class="timeline-sublist">
+                  • Designed and implemented the the Continuous Degradation Detection (CODED) algorithm for mapping forest degradation on Google Earth Engine. <br>
+                </p>  
+                <p class="timeline-sublist"> 
+                  • Developed a 27-year forest change dataset in the Amazon using Landsat and Google Earth Engine. <br>
+                </p>  
+                <p class="timeline-sublist">  
+                  • Led a field team measuring biomass at field plots in mangrove forests in Pohnpei, Micronesia.  <br>
+                </p>
+                <p class="timeline-sublist">  
+                  • Published 6 lead author papers on the development and application of remote sensing algorithms for monitoring environmental change.  <br>
+                </p>
+              </div>  
+            </li>
+
+          </ol>
+
+        </section>
+
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <div class="title-wrapper">
+
+              <div class="icon-box">
+                <ion-icon name="laptop-outline"></ion-icon>
+              </div>
+      
+              <h3 class="h4">Programming</h4>
+
+            </div>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">R</h5>
+                <data value="70">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Javascript</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML/CSS</h5>
+                <data value="70">30%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 30%;"></div>
+              </div>
+
+            </li>
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="planet"></ion-icon>
+              </div>
+      
+              <h3 class="h4">Satellite Data Processing</h4>
+            </div>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Optical</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Radar</h5>
+                <data value="50">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Lidar</h5>
+                <data value="50">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="map-outline"></ion-icon>
+              </div>
+      
+              <h3 class="h4">Tools</h4>
+            </div>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Google Earth Engine</h5>
+                <data value="90">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">QGIS</h5>
+                <data value="90">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="download">
+          <h3 class="h3 download-title">Download</h3>
+
+          <div class="download-container">
+            <a href="./assets/pdfs/Eric_Bullock_Resume.pdf" target="_blank" class="custom-button">
+              <div class="download-box">
+                <ion-icon name="download-outline"></ion-icon>
+              </div>                  Resume
+            </a>
+            <a href="https://www.externalwebsite2.com" target="_blank" class="custom-button">
+              <div class="download-box">
+                <ion-icon name="download-outline"></ion-icon>
+              </div>                
+              Curriculum Vitae
+            </a>
+          </div>
+
+      </section>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="research" data-page="research" data-page="learn more">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <section class="research">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Degradation</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Early Warning</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Biomass</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>REDD+</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Mangroves</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Land Cover Change</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Field Work</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-select-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Degradation</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Early Warning</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Biomass</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>REDD+</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Mangroves</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Land Cover Change</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Field Work</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="degradation", id="btn-coded">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/coded/coded_main.jpeg" alt="degradation" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">CODED</h3>
+
+                <p class="project-category">Forest Degradation Algorithm</p>
+
+              </a>
+              
+
+              <div id="research-modal-coded" class="modal-research">
+                <div class="modal-research-content" research-modal-container>
+                  <span class="close">&times;</span>
+                  <div class="modal-research-intro">
+                    <img src="./assets/images/field/peru2019_2.jpeg" alt="fundo" loading="lazy">
+                    <h2 class="modal-title">Forest Degradation</h2>
+                    <p class="modal-research-intro-text">I use advanced remote sensing, statistical, GIS, and machine learning techniques to map and measure forest degradation and evaluate it's social and environmental impact.</p>
+                    <h3 class="research-modal-subtitle">Summary</h3>
+                    <hr class="thin-line-partial">
+                    <p>Forest degradation profoundly impacts the health of the world's forests and the people that depend on them. Driven primarily by human activities, forest degradation causes carbon emissions, damages ecosystems, threatens biodiversity, and reduces the ability of forests to deliver critical ecosystem services.</p>
+                    <p>Tackling this subtle yet considerable issue is complex and has been a focus of my work. My research, including developing the Continuous Degradation Detection (CODED) algorithm, offers practical tools to detect and quantify forest degradation, providing valuable insights and solutions for forest conservation, natural resource management, and supporting sustainable livelihoods.</p>
+                    <img class="modal-image" src="./assets/images/highlights/degradation/intro_deg_temp.jpg" alt="fundo" loading="lazy">
+                    <p>The following sections summarize my scientific contributions to this pressing issue, including: </p>
+                    <div class="modal-research-contribution-list">
+                      <ul>
+                          <li><b>Pioneered the Continuous Degradation Detection (CODED) Algorithm</b>: This innovative tool detects and quantifies forest degradation, bringing the less visible but significant issue into focus.</li>
+                          <li>Unveiled the Hidden Scale of Forest Disturbance: Produced a 30-year record of deforestation and forest degradation in the Amazon. The findings revealed that over twice the area of forests have been disturbed than previously recognized.</li>
+                          <li>Influenced Climate Change Strategies: Nepal incorporated the CODED algorithm into their official REDD+ strategy and National Determined Contributions to the Paris Climate Agreement, demonstrating a direct application of the research in climate change mitigation efforts.</li>
+                          <li>Collaborated with International Organizations: The World Bank adopted the CODED methodology for a study in Fiji. This collaborative work shows the practical application of the CODED algorithm in real-world scenarios.</li>
+                          <li>Integrated into Global Platforms: The CODED algorithm was integrated into the Food and Agriculture Organization's SEPAL platform, broadening its accessibility and use.</li>
+                          <li>Contributed to Scholarly Literature: Authored four influential research articles and contributed to two others as a co-author, spreading knowledge and insights within the academic community.</li>
+                          <li>Educated on Forest Degradation: Conducted eight technical workshops on the use of CODED to support REDD+ projects, spreading awareness and understanding of forest degradation.</li>
+                          <li>Developed Online Learning Resources: Created an e-Learning course, an online application, and World Bank-funded tutorials on the OpenMRV platform for the widespread use of CODED, ensuring knowledge and tools are accessible to a wider audience.</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                  <h2 class="modal-title">Research Projects</h2>
+                  <hr class="thick-line">
+                  
+
+                  <div class="research-project-wrapper">
+                    <h2 class="research-modal-project-title">Continuous Degradation Detection (CODED)</h2>
+
+                      <img class="modal-image" src="./assets/images/projects/coded/coded_heroshot.jpg" alt="fundo" loading="lazy"><br>                  
+                      <h3 class="research-modal-subtitle">Background</h3>
+                        <hr class="thin-line-partial">
+                        <p class="modal-research-description">Satellite data monitoring of forest degradation is complex, hampered by resolution constraints, frequent cloud cover, and the challenge of differentiating natural variability from actual degradation. Scroll through the examples below to see for yourself.</p>
+                        
+                        <p class="modal-research-description">Further complications arise from potential errors in change detection algorithms and the inherently diverse nature of degradation processes, necessitating flexible and sophisticated monitoring strategies.</p>
+                        <h3 class="research-modal-subtitle">Description</h3>
+                        <hr class="thin-line-partial">
+                        <p class="modal-research-description">I designed CODED to address these challenges by coupling time-series analysis of satellite imagery with supervised machine learning, allowing it to track degradation events through time. </p>
+                        <img class="modal-image" src="./assets/images/projects/coded/coded_heroshot.jpg" alt="fundo" loading="lazy"><br>                  
+
+                      <h3 class="research-modal-subtitle">Resources</h3>
+                        <hr class="thin-line-partial">
+                          <p class="modal-research-description">The CODED algorithm works by: </p>  
+                          <ul class="modal-research-achievements">
+                            <li>1. Applying a spectral mixture model to all available Landsat data</li>
+                            <li>• Generating a 30-year record of deforestation and forest degradation in the Amazon, showing that the over twice the area of forests have been disturbed than previously recognized.</li>
+                            <li>• Use of my CODED algorithm by Nepal to set an emissions baseline for their official REDD+ strategy and National Determined Contributions to the Paris Climate Agreement</li>
+                            <div class="research-modal-resources">
+                              <!-- <a class="research-modal-link" href="https://doi.org/10.1016/j.rse.2018.11.011" style="display:inline">Publication</a>  |  <a href="https://coded.readthedocs.io/en/latest/" style="display:inline">Read the Docs</a>  |  <a href="https://openmrv.org/web/guest/w/modules/mrv/modules_2/continuous-degradation-detection-coded" style="display:inline">OpenMRV</a>  |  <a href="https://www.silvacarbon.org/index.html#knowledge" style="display:inline">SilvaCarbon E-Learning Course</a> -->
+                              <a class="research-modal-link" href="https://doi.org/10.1016/j.rse.2018.11.011">Publication</a>  |  <a class="research-modal-link" href="https://coded.readthedocs.io/en/latest/">Read the Docs</a>  |  <a class="research-modal-link" href="https://openmrv.org/web/guest/w/modules/mrv/modules_2/continuous-degradation-detection-coded">OpenMRV</a>  |  <a class="research-modal-link" href="https://www.silvacarbon.org/index.html#knowledge">SilvaCarbon E-Learning Course</a>
+                          </div>     
+                    </div>
+                    <hr class="thin-line-dark">
+
+                  
+                  <h2 class="research-modal-project-title">Forest Degradation in the Amazon</h2>
+                    <!-- <p class="modalexp-description">Mapping 30 Years of Forest Disturbance in the Amazon</p> -->
+                      <img class="modal-image" src="./assets/images/projects/amazon/Figure2.jpeg" alt="fundo" loading="lazy"><br>                  
+                      <b>Bullock, E. L.</b>, Woodcock, C. E., Souza Jr, C., & Olofsson, P. (2020). Satellite‐based estimates reveal widespread forest degradation in the Amazon. Global Change Biology, 26(5), 2956-2969. <a href="https://doi.org/10.1016/j.rse.2018.11.011">https://doi.org/10.1111/gcb.15029</a><br>
+                      <hr style="height:1px;border-width:0;color:gray;background-color:#d3d3d3;margin-top:3px; margin-bottom:10px">
+                    
+                    <p class="modal-research-description">Evaluating Land Tenure Clarification and Boundary Clarification of Guatemala's Protected Areas</p>
+                      <img class="modal-image" src="./assets/images/projects/guatemala_figure.jpeg" alt="fundo" loading="lazy"><br>                  
+                      <b>Bullock, E. L.</b>, Nolte, C., Segovia, A. R. & Woodcock, C. (2020). Ongoing forest disturbance in Guatemala’s protected areas. Remote Sensing in Ecology and Conservation, 6(2), 141–152. <a href="https://doi.org/10.1002/rse2.130">https://doi.org/10.1002/rse2.130</a><br>
+                      <hr style="height:1px;border-width:0;color:gray;background-color:#d3d3d3;margin-top:3px; margin-bottom:10px">
+  
+                    <p class="modal-research-description">Modeling carbon dynamics in the Amazon</p>
+                      <img class="modal-image" src="./assets/images/projects/amazon_carbon.jpg" alt="fundo" loading="lazy"><br>                  
+                      <b>Bullock, E. L.</b> & Woodcock, C. (2021). Carbon loss and removal due to forest disturbance and regeneration in the Amazon. Science of The Total Environment, 764, 142839. <a href="https://doi.org/10.1016/j.scitotenv.2020.142839">https://doi.org/10.1016/j.scitotenv.2020.142839</a><br>
+                      <hr style="height:1px;border-width:0;color:gray;background-color:#d3d3d3;margin-top:3px; margin-bottom:10px">
+  
+                      <p class="modal-research-description">Fiji</p>
+                      <img class="modal-image" src="./assets/images/projects/fiji/fiji_2.jpg" alt="fundo" loading="lazy"><br>                  
+                      <b> Bullock E. L. </b> Continuous Degradation Detection (CODED) in support of national forest emissions reporting in Fiji. (2021). [Project Report]. World Bank. 
+                      <hr style="height:1px;border-width:0;color:gray;background-color:#d3d3d3;margin-top:3px; margin-bottom:10px">
+
+                    <p class="modal-research-description">Terai, Nepal</p>
+                      <img class="modal-image" src="./assets/images/projects/nepal.png" alt="fundo" loading="lazy"><br>                  
+                      Aryal, R. R., Wespestad, C., Kennedy, R., Dilger, J., Dyson, K., <b>Bullock, E. L.</b>, Khanal, N., Kono, M., Poortinga, A., Saah, D. & Tenni. (2021). Lessons Learned While Implementing a Time-Series Approach to Forest Canopy Disturbance Detection in Nepal. Remote Sensing, 13(14), 2666. <a href="https://doi.org/10.3390/rs13142666">https://doi.org/10.3390/rs13142666</a><br>
+                      <hr style="height:1px;border-width:0;color:gray;background-color:#d3d3d3;margin-top:3px; margin-bottom:10px">
+                  </div>
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="degradation">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/amazon/amazon_main.jpeg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Amazon</h3>
+
+                <p class="project-category">20-Year Record of Forest Change</p>
+
+              </a>
+            </li>
+
+            <!-- GEDI in Paraguay -->
+            <li class="project-item  active" data-filter-item data-category="biomass">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/gedi/gedi_main4.png" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">GEDI Lidar</h3>
+
+                <p class="project-category">Estimating Forest Carbon Stocks in Paraguay</p>
+
+              </a>
+            </li>
+
+            <!-- Micronesia 1 -->
+            <li class="project-item  active" data-filter-item data-category="field work">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/micronesia_figure2.jpeg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Blue Carbon in Micronesia</h3>
+
+                <p class="project-category">Measuring mangrove carbon stocks in Pohnpei, Micronesia.</p>
+
+              </a>
+            </li>
+
+            <!-- Micronesia 2 -->
+            <li class="project-item  active" data-filter-item data-category="mangroves">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/micronesia_figure.jpeg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mangrove Extent Mapping</h3>
+
+                <p class="project-category">High resolution mangrove extent mapping in Micronesia.</p>
+
+              </a>
+            </li>
+
+            <!-- Amazon Field 2 -->
+            <li class="project-item  active" data-filter-item data-category="field work">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/amazon/amazon_field_1.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Forest Degradation Field Validation</h3>
+
+                <p class="project-category">Evaluating satellite response to degradation in Iquitos, Peru.</p>
+
+              </a>
+            </li>
+
+            <!-- Vietnam -->
+            <li class="project-item  active" data-filter-item data-category="field work">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/vietnam_figure2.jpeg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Forest Degradation Field Validation</h3>
+
+                <p class="project-category">Evaluating satellite response to degradation in Iquitos, Peru.</p>
+
+              </a>
+
+            </li>
+            
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!-- 
+        Publications
+      -->
+      <article class="publications" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <section class="publication-section">
+
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">2023</h3>
+          </div>
+
+          <ol class="publication-list">
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Healey, S. P., Zhiqiang, Y., Acosta, R., Villalba, H., Insfrán, K. P., Melo, J. B., Wilson, S., Duncanson, L., Næsset, E., Armston, J. D., Saarela, S., Ståhl, G., Patterson, P. L. & Dubayah, R. O. (2023). Estimating aboveground biomass density using hybrid statistical inference with GEDI lidar data and Paraguay’s national forest inventory. Environmental Research Letters. <a href=”https://doi.org/10.1088/1748-9326/acdf03”>doi: 10.1088/1748-9326/acdf03</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Gorelick, N., Yang, Z., Arévalo, P., <b>Bullock, E.</b>, Insfrán, K. P. & Healey, S. P. (2023). A global time series dataset to facilitate forest greenhouse gas reporting. Environmental Research Letters. <a href=“https://doi.org/10.1088/1748-9326/ace2da”>doi:10.1088/1748-9326/ace2da </a></p>
+            </li>
+            
+            <li class="publication-item">
+              <p class=“publication-item-title”>Tang, X., Bratley, K., Cho, K., <b>Bullock, E.</b>, Olofsson, P. & Woodcock, C. (2023). Near real-time monitoring of tropical forest disturbance by fusion of Landsat, Sentinel-2, and Sentinel-1 data. Remote Sensing of Environment, 294, 113626. <a href=“https://doi.org/10.1016/j.rse.2019.02.003”>doi: 10.1016/j.rse.2019.02.003</a></p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="publication-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">2022</h3>
+          </div>
+
+          <ol class="publication-list">  
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Healey, S. P., Yang, Z., Houborg, R., Gorelick, N., Tang, X. & Andrianirina, C. (2022). Timeliness in Forest Change Monitoring: A New Assessment Framework Demonstrated using Sentinel-1 and a Continuous Change Detection Algorithm. Remote Sensing of Environment, 276, 113043. <a href=“https://doi.org/10.1016/j.rse.2022.113043”>doi: 10.1016/j.rse.2022.113043</a></p>
+            </li>
+            
+            <li class="publication-item">
+              <p class=“publication-item-title”>Friedl, M. A., Woodcock, C., Olofsson, P., Zhu, Z., Loveland, T., Stanimirova, R., Arevalo, P., <b>Bullock, E.</b>, Hu, K.-T. & Zhang, Y. (2022). Medium spatial resolution mapping of global land cover and land cover change across multiple decades from Landsat. Frontiers in Remote Sensing, 3, 894571. <a href=“https://doi.org/10.3389/frsen.2022.894571”>doi: 10.3389/frsen.2022.894571</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Pasquarella, V., Arévalo, P., Bratley, K., <b>Bullock, E.</b>, Gorelick, N., Yang, Z. & Kennedy, R. (2022). Demystifying LandTrendr and CCDC temporal segmentation. International Journal of Applied Earth Observation and Geoinformation, 110, 102806. <a href=“https://doi.org/10.1016/j.jag.2022.102806”>doi: 10.1016/j.jag.2022.102806</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Woltz, V. L., Peneva-Reed, E., Zhu, Z., <b>Bullock, E.</b>, MacKenzie, R. A., Apwong, M., Krauss, K. W. & Gesch, D. (2022). A comprehensive assessment of mangrove species and carbon stock on Pohnpei, Micronesia. PloS One, 17(7), e0271589. <a href=“https://doi.org/10.1371/journal.pone.0271589”>doi: 10.1371/journal.pone.0271589</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Zhang, Y., Woodcock, C., Arévalo, P., Olofsson, P., Tang, X., Stanimirova, R., <b>Bullock, E.</b>, Tarrio, K., Zhu, Z. & Friedl, M. (2022). A Global Analysis of the Spatial and Temporal Variability of Usable Landsat Observations at the Pixel Scale. Remote Sensing, Section on Remote Sensing Time Series Analysis, 3, 894618. <a href=“https://doi.org/10.3389/frsen.2022.894618”>doi: 10.3389/frsen.2022.894618</a></p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="publication-section">
+
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">2021</h3>
+          </div>
+
+          <ol class="publication-list">
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Aryal, R. R., Wespestad, C., Kennedy, R., Dilger, J., Dyson, K., <b>Bullock, E.</b>, Khanal, N., Kono, M., Poortinga, A., Saah, D. & Tenni. (2021). Lessons Learned While Implementing a Time-Series Approach to Forest Canopy Disturbance Detection in Nepal. Remote Sensing, 13(14), 2666. <a href=“https://doi.org/10.3390/rs13142666”>doi: 10.3390/rs13142666</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Healey, S., Yang, Z., Oduor, P., Gorelick, N., Omondi, S., Ouko, E. & Cohen, W. (2021). Three decades of land cover change in East Africa. Land, 10(2), 150. <a href=“https://doi.org/10.3390/land10020150”>doi: 10.3390/land10020150</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b> & Woodcock, C. (2021). Carbon loss and removal due to forest disturbance and regeneration in the Amazon. Science of The Total Environment, 764, 142839. <a href=“https://doi.org/10.1016/j.scitotenv.2020.142839”>doi: 10.1016/j.scitotenv.2020.142839</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Chen, S., Woodcock, C., <b>Bullock, E.</b>, Arévalo, P., Torchinava, P., Peng, S. & Olofsson, P. (2021). Monitoring temperate forest degradation on Google Earth Engine using Landsat time series analysis. Remote Sensing of Environment, 265, 112648. <a href=“https://doi.org/10.1016/j.rse.2021.112648”>doi: 10.1016/j.rse.2021.112648</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Peneva-Reed, E., Krauss, K., <b>Bullock, E.</b>, Zhu, Z., Woltz, V., Drexler, J., Conrad, J. & Stehman, S. (2021). Carbon stock losses and recovery observed for a mangrove ecosystem following a major hurricane in Southwest Florida. Estuarine, Coastal and Shelf Science, 248, 106750. <a href=“https://doi.org/10.1016/j.ecss.2020.106750”>doi: 10.1016/j.ecss.2020.106750</a></p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="publication-section">
+
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">2020</h3>
+          </div>
+
+          <ol class="publication-list">
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Arévalo, P., <b>Bullock, E.</b>, Woodcock, C. & Olofsson, P. (2020). A suite of tools for continuous land change monitoring in Google Earth Engine. Frontiers in Climate, 2, 576740. <a href=“https://doi.org/10.3389/fclim.2020.576740”>doi: 10.3389/fclim.2020.576740</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Nolte, C., Segovia, A. R. & Woodcock, C. (2020). Ongoing forest disturbance in Guatemala’s protected areas. Remote Sensing in Ecology and Conservation, 6(2), 141–152. <a href=“https://doi.org/10.1002/rse2.130”>doi: 10.1002/rse2.130</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Woodcock, C. & Holden, C. (2020). Improved change monitoring using an ensemble of time series algorithms. Remote Sensing of Environment, 238, 111165. <a href=“https://doi.org/10.1016/j.rse.2019.04.018”>doi: 10.1016/j.rse.2019.04.018</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Woodcock, C. & Olofsson, P. (2020). Monitoring tropical forest degradation using spectral unmixing and Landsat time series analysis. Remote Sensing of Environment, 238, 110968. <a href=“https://doi.org/10.1016/j.rse.2018.11.011”>doi: 10.1016/j.rse.2018.11.011</a></p>
+            </li>
+
+            <li class="publication-item">
+             <p class=“publication-item-title”><b>Bullock, E.</b>, Woodcock, C., Souza, C. M. & Olofsson, P. (2020). Satellite-based estimates reveal widespread forest degradation in the Amazon. Global Change Biology, 26(5), 2956–2969. <a href=“https://doi.org/10.1111/gcb.15029”>doi: 10.1111/gcb.15029</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Tang, X., <b>Bullock, E.</b>, Olofsson, P. & Woodcock, C. (2020). Can VIIRS continue the legacy of MODIS for near real-time monitoring of tropical forest disturbance? Remote Sensing of Environment, 249, 112024. <a href=“https://doi.org/10.1016/j.rse.2020.112024”>doi: 10.1016/j.rse.2020.112024</a></p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="publication-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Before 2020</h3>
+          </div>
+
+          <ol class="publication-list">
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Pickett, B., Irvine, I. C., <b>Bullock, E.</b>, Arogyaswamy, K. & Aronson, E. (2019). Legacy effects of invasive grass impact soil microbes and native shrub growth. Invasive Plant Science and Management, 12(1), 22–35. <a href=“https://doi.org/doi:10.1017/inp.2018.32”> doi:10.1017/inp.2018.32</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Tang, X., <b>Bullock, E.</b>, Olofsson, P., Estel, S. & Woodcock, C. (2019). Near real-time monitoring of tropical forest disturbance: New algorithms and assessment framework. Remote Sensing of Environment, 224, 202–218. <a href=“https://doi.org/10.1016/j.rse.2019.02.003”> doi:10.1016/j.rse.2019.02.003</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”><b>Bullock, E.</b>, Fagherazzi, S., Nardin, W., Vo-Luong, P., Nguyen, P. & Woodcock, C. (2017). Temporal patterns in species zonation in a mangrove forest in the Mekong Delta, Vietnam, using a time series of Landsat imagery. Continental Shelf Research, 148, 144–154. <a href=“https://doi.org/10.1016/j.csr.2017.07.007”> doi:10.1016/j.csr.2017.07.007</a></p>
+            </li>
+
+            <li class="publication-item">
+              <p class=“publication-item-title”>Olofsson, P., Holden, C., <b>Bullock, E.</b> & Woodcock, C. (2016). Time series analysis of satellite data reveals continuous deforestation of New England since the 1980s. Environmental Research Letters, 11(6), 064002. <a href=“https://doi.org/10.1088/1748-9326/11/6/064002”> doi:10.1088/1748-9326/11/6/064002</a></p>
+            </li>
+
+            <li class="publication-item">  
+              <p class=“publication-item-title”><b>Bullock, E.</b> (2016). A two-stage stratified sampling design for Ministerio del Ambiente (MINAM) land cover change map asssessment in Peru. Boston, MA: GFA Consulting Group. </p>
+            </li>
+          </ol>
+    
+          <!-- <ul>
+            <li><b>Bullock, E.</b>, Healey, S. P., Zhiqiang, Y., Acosta, R., Villalba, H., Insfrán, K. P., Melo, J. B., Wilson, S., Duncanson, L., Næsset, E., Armston, J. D., Saarela, S., Ståhl, G., Patterson, P. L. & Dubayah, R. O. (2023). Estimating aboveground biomass density using hybrid statistical inference with GEDI lidar data and Paraguay’s national forest inventory. Environmental Research Letters. <a href=”https://doi.org/10.1088/1748-9326/acdf03”>doi: 10.1088/1748-9326/acdf03</a></li>
+            <li>Gorelick, N., Yang, Z., Arévalo, P., <b>Bullock, E.</b>, Insfrán, K. P. & Healey, S. P. (2023). A global time series dataset to facilitate forest greenhouse gas reporting. Environmental Research Letters. <a href=“https://doi.org/10.1088/1748-9326/ace2da”>doi:10.1088/1748-9326/ace2da </a></li>
+            <li>Tang, X., Bratley, K., Cho, K., <b>Bullock, E.</b>, Olofsson, P. & Woodcock, C. (2023). Near real-time monitoring of tropical forest disturbance by fusion of Landsat, Sentinel-2, and Sentinel-1 data. Remote Sensing of Environment, 294, 113626. <a href=“https://doi.org/10.1016/j.rse.2019.02.003”>doi: 10.1016/j.rse.2019.02.003</a></li>
+            <li><b>Bullock, E.</b>, Healey, S. P., Yang, Z., Houborg, R., Gorelick, N., Tang, X. & Andrianirina, C. (2022). Timeliness in Forest Change Monitoring: A New Assessment Framework Demonstrated using Sentinel-1 and a Continuous Change Detection Algorithm. Remote Sensing of Environment, 276, 113043. <a href=“https://doi.org/10.1016/j.rse.2022.113043”>doi: 10.1016/j.rse.2022.113043</a></li>
+            <li>Friedl, M. A., Woodcock, C., Olofsson, P., Zhu, Z., Loveland, T., Stanimirova, R., Arevalo, P., <b>Bullock, E.</b>, Hu, K.-T. & Zhang, Y. (2022). Medium spatial resolution mapping of global land cover and land cover change across multiple decades from Landsat. Frontiers in Remote Sensing, 3, 894571. <a href=“https://doi.org/10.3389/frsen.2022.894571”>doi: 10.3389/frsen.2022.894571</a></li>
+            <li>Pasquarella, V., Arévalo, P., Bratley, K., <b>Bullock, E.</b>, Gorelick, N., Yang, Z. & Kennedy, R. (2022). Demystifying LandTrendr and CCDC temporal segmentation. International Journal of Applied Earth Observation and Geoinformation, 110, 102806. <a href=“https://doi.org/10.1016/j.jag.2022.102806”>doi: 10.1016/j.jag.2022.102806</a></li>
+            <li>Woltz, V. L., Peneva-Reed, E., Zhu, Z., <b>Bullock, E.</b>, MacKenzie, R. A., Apwong, M., Krauss, K. W. & Gesch, D. (2022). A comprehensive assessment of mangrove species and carbon stock on Pohnpei, Micronesia. PloS One, 17(7), e0271589. <a href=“https://doi.org/10.1371/journal.pone.0271589”>doi: 10.1371/journal.pone.0271589</a></li>
+            <li>Zhang, Y., Woodcock, C., Arévalo, P., Olofsson, P., Tang, X., Stanimirova, R., <b>Bullock, E.</b>, Tarrio, K., Zhu, Z. & Friedl, M. (2022). A Global Analysis of the Spatial and Temporal Variability of Usable Landsat Observations at the Pixel Scale. Remote Sensing, Section on Remote Sensing Time Series Analysis, 3, 894618. <a href=“https://doi.org/10.3389/frsen.2022.894618”>doi: 10.3389/frsen.2022.894618</a></li>
+            <li>Aryal, R. R., Wespestad, C., Kennedy, R., Dilger, J., Dyson, K., <b>Bullock, E.</b>, Khanal, N., Kono, M., Poortinga, A., Saah, D. & Tenni. (2021). Lessons Learned While Implementing a Time-Series Approach to Forest Canopy Disturbance Detection in Nepal. Remote Sensing, 13(14), 2666. <a href=“https://doi.org/10.3390/rs13142666”>doi: 10.3390/rs13142666</a></li>
+            <li><b>Bullock, E.</b>, Healey, S., Yang, Z., Oduor, P., Gorelick, N., Omondi, S., Ouko, E. & Cohen, W. (2021). Three decades of land cover change in East Africa. Land, 10(2), 150. <a href=“https://doi.org/10.3390/land10020150”>doi: 10.3390/land10020150</a></li>
+            <li><b>Bullock, E.</b> & Woodcock, C. (2021). Carbon loss and removal due to forest disturbance and regeneration in the Amazon. Science of The Total Environment, 764, 142839. <a href=“https://doi.org/10.1016/j.scitotenv.2020.142839”>doi: 10.1016/j.scitotenv.2020.142839</a></li>
+            <li>Chen, S., Woodcock, C., <b>Bullock, E.</b>, Arévalo, P., Torchinava, P., Peng, S. & Olofsson, P. (2021). Monitoring temperate forest degradation on Google Earth Engine using Landsat time series analysis. Remote Sensing of Environment, 265, 112648. <a href=“https://doi.org/10.1016/j.rse.2021.112648”>doi: 10.1016/j.rse.2021.112648</a></li>
+            <li>Peneva-Reed, E., Krauss, K., <b>Bullock, E.</b>, Zhu, Z., Woltz, V., Drexler, J., Conrad, J. & Stehman, S. (2021). Carbon stock losses and recovery observed for a mangrove ecosystem following a major hurricane in Southwest Florida. Estuarine, Coastal and Shelf Science, 248, 106750. <a href=“https://doi.org/10.1016/j.ecss.2020.106750”>doi: 10.1016/j.ecss.2020.106750</a></li>
+            <li>Arévalo, P., <b>Bullock, E.</b>, Woodcock, C. & Olofsson, P. (2020). A suite of tools for continuous land change monitoring in Google Earth Engine. Frontiers in Climate, 2, 576740. <a href=“https://doi.org/10.3389/fclim.2020.576740”>doi: 10.3389/fclim.2020.576740</a></li>
+            <li><b>Bullock, E.</b>, Nolte, C., Segovia, A. R. & Woodcock, C. (2020). Ongoing forest disturbance in Guatemala’s protected areas. Remote Sensing in Ecology and Conservation, 6(2), 141–152. <a href=“https://doi.org/10.1002/rse2.130”>doi: 10.1002/rse2.130</a></li>
+            <li><b>Bullock, E.</b>, Woodcock, C. & Holden, C. (2020). Improved change monitoring using an ensemble of time series algorithms. Remote Sensing of Environment, 238, 111165. <a href=“https://doi.org/10.1016/j.rse.2019.04.018”>doi: 10.1016/j.rse.2019.04.018</a></li>
+            <li><b>Bullock, E.</b>, Woodcock, C. & Olofsson, P. (2020). Monitoring tropical forest degradation using spectral unmixing and Landsat time series analysis. Remote Sensing of Environment, 238, 110968. <a href=“https://doi.org/10.1016/j.rse.2018.11.011”>doi: 10.1016/j.rse.2018.11.011</a></li>
+            <li><b>Bullock, E.</b>, Woodcock, C., Souza, C. M. & Olofsson, P. (2020). Satellite-based estimates reveal widespread forest degradation in the Amazon. Global Change Biology, 26(5), 2956–2969. <a href=“https://doi.org/10.1111/gcb.15029”>doi: 10.1111/gcb.15029</a></li>
+            <li>Tang, X., <b>Bullock, E.</b>, Olofsson, P. & Woodcock, C. (2020). Can VIIRS continue the legacy of MODIS for near real-time monitoring of tropical forest disturbance? Remote Sensing of Environment, 249, 112024. <a href=“https://doi.org/10.1016/j.rse.2020.112024”>doi: 10.1016/j.rse.2020.112024</a></li>
+            <li>Pickett, B., Irvine, I. C., <b>Bullock, E.</b>, Arogyaswamy, K. & Aronson, E. (2019). Legacy effects of invasive grass impact soil microbes and native shrub growth. Invasive Plant Science and Management, 12(1), 22–35. <a href=“https://doi.org/doi:10.1017/inp.2018.32”> doi:10.1017/inp.2018.32</a></li>
+            <li>Tang, X., <b>Bullock, E.</b>, Olofsson, P., Estel, S. & Woodcock, C. (2019). Near real-time monitoring of tropical forest disturbance: New algorithms and assessment framework. Remote Sensing of Environment, 224, 202–218. <a href=“https://doi.org/10.1016/j.rse.2019.02.003”> doi:10.1016/j.rse.2019.02.003</a></li>
+            <li><b>Bullock, E.</b>, Fagherazzi, S., Nardin, W., Vo-Luong, P., Nguyen, P. & Woodcock, C. (2017). Temporal patterns in species zonation in a mangrove forest in the Mekong Delta, Vietnam, using a time series of Landsat imagery. Continental Shelf Research, 148, 144–154. <a href=“https://doi.org/10.1016/j.csr.2017.07.007”> doi:10.1016/j.csr.2017.07.007</a></li>
+            <li>Olofsson, P., Holden, C., <b>Bullock, E.</b> & Woodcock, C. (2016). Time series analysis of satellite data reveals continuous deforestation of New England since the 1980s. Environmental Research Letters, 11(6), 064002. <a href=“https://doi.org/10.1088/1748-9326/11/6/064002”> doi:10.1088/1748-9326/11/6/064002</a></li>
+            <li><b>Bullock, E.</b> (2016). A two-stage stratified sampling design for Ministerio del Ambiente (MINAM) land cover change map asssessment in Peru. Boston, MA: GFA Consulting Group. </li>
+            </ul> -->
+            
+        </section>
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="contact-section">
+          <div id="mapcontact"></div>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+        
+            <form action="https://send.pageclip.co/z9m07XftFVUPRm9LzPsbEVqHT8Lp8z6U/contact-form" class="pageclip-form" method="post">  
+              <!-- This will be used in the email's reply-to field. Must have name="email" -->
+              <input type="name" name="name" class="form-input" value="Full Name"/>
+              <input type="email" name="email" class="form-input" value="Email Address"/>
+
+              <!-- This will be used in the email's subject. Must have name="subject" -->
+            <input type="text" name="subject" class="form-input" value="Email Subject"/>
+
+            <textarea name="body" class="form-input">Your Message</textarea>
+
+            <button class="form-btn" type="button" data-form-btn>
+              <span>Submit</span>
+            </button>
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="assets/js/map.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
+
+</html>
